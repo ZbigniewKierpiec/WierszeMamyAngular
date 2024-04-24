@@ -1,0 +1,96 @@
+.box {
+  background-color: #add8e6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 90%;
+  height: 80%;
+}
+
+section {
+  height: 90%;
+
+  display: grid;
+  // grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+  grid-template-rows: repeat(3,1fr);
+  grid-row-gap: 1rem;
+  justify-content: center;
+
+overflow-y: scroll;
+overflow-x: hidden;
+overflow-wrap: normal;
+  padding: 2rem;
+}
+
+.wiersze {
+  width: 40rem;
+  height: 20rem;
+  background-color: yellow;
+
+  position: relative;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 4rem;
+  font-family: Georgia, sans-serif;
+  font-weight: bolder;
+  word-spacing: 0.3rem;
+
+  background-color: rgb(113, 154, 168);
+
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-transform: capitalize;
+
+}
+
+
+
+
+
+
+
+
+.top {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 2rem;
+  color: #bfa100;
+  color: white;
+}
+.title {
+  position: absolute;
+  top: 10%;
+  text-transform: capitalize;
+}
+.bottom {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 2rem;
+  color: white;
+}
+
+
+
+
+
+
+
+
+footer {
+  height: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+<div class="box">
+  <main class="main">
+    <section>
+      <ng-container *ngFor="let item of poems">
+        <div  class="wiersze">
+          <span class="top">
+            <i class="fa-solid fa-quote-left"></i>
+          </span>
+          <h2 class="title">{{ item.title }}</h2>
+          <p>{{ item.name | poems: 100 }}</p>
+          <span class="bottom">
+            <i class="fa-solid fa-quote-right"></i>
+          </span>
+        </div>
+      </ng-container>
+    </section>
+    <footer></footer>
+  </main>
+</div>
