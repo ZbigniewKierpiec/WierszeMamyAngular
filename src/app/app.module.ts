@@ -14,6 +14,10 @@ import { Hamburger2Component } from './Elements/hamburger2/hamburger2.component'
 import { MattbuttoneffectComponent } from './Elements/mattbuttoneffect/mattbuttoneffect.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { PoemsPipe } from './Pipes/poems.pipe';
+import { WierszeDetailsComponent } from './Components/wiersze/wiersze-details/wiersze-details.component';
+import { After5LinePipe } from './Pipes/after5-line.pipe';
+import { AddMarginPipe } from './Pipes/add-margin.pipe';
+import { PoemsComponent } from './Components/wiersze/poems/poems.component';
 
 
 @NgModule({
@@ -28,6 +32,10 @@ import { PoemsPipe } from './Pipes/poems.pipe';
     Hamburger2Component,
     MattbuttoneffectComponent,
     PoemsPipe,
+    WierszeDetailsComponent,
+    After5LinePipe,
+    AddMarginPipe,
+    PoemsComponent,
 
 
   ],

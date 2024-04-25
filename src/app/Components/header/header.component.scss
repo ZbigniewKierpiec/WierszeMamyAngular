@@ -11,12 +11,12 @@ header {
   //   rgba(9, 121, 84, 1) 37%,
   //   rgba(0, 212, 255, 1) 100%
   // );
-background-color:#CA9B94 ;
-background-color: transparent;
+  background-color: #ca9b94;
+  background-color: transparent;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
- height: auto;
+  height: auto;
   z-index: 3;
   font-weight: 600;
 }
@@ -28,8 +28,6 @@ a.logo {
   display: inline-block;
   margin-left: 20px;
   // background-color: yellow;
-
-
 }
 .logo img {
   width: 100%;
@@ -47,27 +45,24 @@ a.logo {
 header ul {
   margin: 0;
   padding: 0;
-  height:100%;
+  height: 100%;
 
   list-style: none;
-
+  position: relative;
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-
 }
 header ul li {
   height: 100%;
 
- &:nth-child(1) {
-  // padding: 20px;
- }
-
+  &:nth-child(1) {
+    // padding: 20px;
+  }
 }
 header ul li a {
-
   // display: inline-block;
   padding: 20px 20px;
   text-decoration: none;
@@ -81,11 +76,11 @@ header ul li a {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  background-color:rgba(0, 0, 0, 0.314);
+  background-color: rgba(0, 0, 0, 0.314);
   text-align: center !important;
   position: relative;
-  &:nth-child(1)::before{
-    content: '';
+  &:nth-child(1)::before {
+    content: "";
     position: absolute;
     bottom: 0;
     display: block;
@@ -93,13 +88,6 @@ header ul li a {
     height: 1px;
     background-color: white;
   }
-
-
-  &.activeLink{
-    color: red !important;
-  }
-
-
 }
 
 header li a:hover,
@@ -113,7 +101,6 @@ header > a {
   font-size: 2em;
   // padding: 10px 20px;
   text-decoration: none;
-
 }
 
 header ul {
@@ -129,7 +116,6 @@ header label {
   // padding: 28px 20px;
   position: relative;
   user-select: none;
-
 }
 
 header label span {
@@ -139,22 +125,14 @@ header label span {
   position: relative;
   transition: background 0.2s ease-out;
   width: 25px;
-
-
 }
 
+.btn {
+  display: flex;
+  align-items: center;
 
-
-.btn{
-
-display: flex;
-align-items: center;
-
-margin-right: 3rem;
-
-
+  margin-right: 3rem;
 }
-
 
 header input {
   display: none;
@@ -162,25 +140,13 @@ header input {
 
 header input:checked ~ ul {
   max-height: 440px;
-
 }
 
-header input:checked ~ ul li a{
+header input:checked ~ ul li a {
   visibility: visible;
   pointer-events: all;
   opacity: 1;
-
 }
-
-
-
-
-
-
-
-
-
-
 
 header input:checked ~ label span {
   background: transparent;
@@ -199,29 +165,29 @@ header input:checked ~ label:not(.steps) .span:after {
   top: 0;
 }
 
+.slide {
+  display: none;
+}
+
 @media (min-width: 48rem) {
- header{
-  height:10rem;
+  header {
+    height: 10rem;
 
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 121, 84, 1) 37%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
 
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 121, 84, 1) 37%,
-    rgba(0, 212, 255, 1) 100%
-  );
-
-
- }
-
- .logo img{
-width:70%;
- display: block;
- }
+  .logo img {
+    width: 70%;
+    display: block;
+  }
 
   header li {
     float: left;
-
   }
   header ul li a {
     padding: 20px 30px;
@@ -229,23 +195,21 @@ width:70%;
     visibility: visible;
     opacity: 1;
     background-color: transparent;
-    &:nth-child(1)::before{
-      content: '';
+    letter-spacing: 0.2rem;
+
+    &:nth-child(1)::before {
+      content: "";
       position: absolute;
       bottom: 0;
       display: block;
       width: 20rem;
       height: 1px;
-      background-color:transparent;
+      background-color: transparent;
     }
 
-
-    &.activeLink{
-      color: red !important;
-    }
-
-
-
+    // &.activeLink{
+    //   color: red !important;
+    // }
   }
   header ul {
     clear: none;
@@ -258,7 +222,14 @@ width:70%;
     display: none;
   }
 
-
-
+  .slide {
+    display: block;
+    transition: transform 0.3s linear;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: skyblue;
+  }
 }
-

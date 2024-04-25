@@ -1,8 +1,9 @@
-<div class="box">
+[<div class="box">
+
   <main class="main">
     <section>
-      <ng-container *ngFor="let item of poems">
-        <div  class="wiersze">
+      <ng-container  #poemsContainer     *ngFor="let item of poems">
+        <div  (click)="getDetails(item)"      class="wiersze">
           <span class="top">
             <i class="fa-solid fa-quote-left"></i>
           </span>
@@ -17,3 +18,4 @@
     <footer></footer>
   </main>
 </div>
+<app-wiersze-details [tornActive]="parentActive"  [title]="title"   (eventToParent)="handleEventFromChild()" [name]="name" ></app-wiersze-details>

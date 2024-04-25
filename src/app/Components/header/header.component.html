@@ -1,4 +1,5 @@
-<header class="animate__animated animate__fadeInDown animate__delay-4s ">
+<!-- animate__animated animate__fadeInDown animate__delay-4s -->
+<header>
   <a class="logo">
     <img
       src="https://cdn.vectorstock.com/i/preview-1x/78/55/feather-logo-writing-quill-stroke-black-icon-vector-48457855.jpg"
@@ -12,17 +13,79 @@
     type="checkbox"
     id="menu-btn"
   />
-  <label  class="btn" for="menu-btn">
+  <label class="btn" for="menu-btn">
     <app-hamburger2></app-hamburger2>
   </label>
   <ul>
-    <!-- <li #listItem class="animatedListItem"     *ngFor="let item of menuItems , let i =index">
-      <a  [classList]="isActive ?'animate__animated animate__fadeInLeft  ':''"         href="#">{{ item }}</a>
-    </li> -->
 
-    <li #listItem class="animatedListItem"><a    [classList]="isActive ?'animate__animated animate__fadeInLeft animate__faster animate__delay-1s ':''" routerLinkActive="activeLink"      [class.activeLink]="isActiveMain"            routerLink="/main">Witamy</a></li>
-    <li #listItem class="animatedListItem"><a  [classList]="isActive ?'animate__animated animate__fadeInLeft animate__fast animate__delay-1s ':''" routerLinkActive="activeLink"             routerLink="/wiersze"     href="#">Wiersze</a></li>
-    <li #listItem class="animatedListItem"><a  [classList]="isActive ?'animate__animated animate__fadeInLeft animate__slow animate__delay-1s':''"      href="#">Careers</a></li>
-    <li #listItem class="animatedListItem"><a  [classList]="isActive ?'animate__animated animate__fadeInLeft animate__slower animate__delay-1s':''"      href="#">Contact</a></li>
+
+    <li
+    (click)="selectLi(0)"
+
+      class="animatedListItem"
+    >
+
+      <a
+
+        [classList]="
+          isActive
+            ? 'animate__animated animate__fadeInLeft animate__faster animate__delay-1s '
+            : ''
+        "
+        routerLinkActive="activeLink"
+        [class.activeLink]="isActiveMain"
+        routerLink="/main"
+        >Witamy</a
+      >
+    </li>
+
+    <li
+
+    (click)="selectLi(1)"
+
+      class="animatedListItem"
+    >
+      <a
+
+        [classList]="
+          isActive
+            ? 'animate__animated animate__fadeInLeft animate__fast animate__delay-1s '
+            : ''
+        "
+        routerLinkActive="activeLink"
+        routerLink="/wiersze"
+        href="#"
+        >Wiersze</a
+      >
+    </li>
+
+    <li #listItem  class="animatedListItem">
+      <a
+
+        [classList]="
+          isActive
+            ? 'animate__animated animate__fadeInLeft animate__slow animate__delay-1s'
+            : ''
+        "
+        href="#"
+        >Careers</a
+      >
+    </li>
+    <li #listItem         class="animatedListItem">
+      <a
+
+        [classList]="
+          isActive
+            ? 'animate__animated animate__fadeInLeft animate__slower animate__delay-1s'
+            : ''
+        "
+        href="#"
+        >Contact</a
+      >
+    </li>
+
+    <div        [ngStyle]="{ 'width.px': markerWidth }"          #segmentedControl   #marker
+       class="slide"></div>
+
   </ul>
 </header>
