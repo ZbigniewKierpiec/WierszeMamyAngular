@@ -1,14 +1,17 @@
 <div [class.active]="tornActive" class="box">
   <div id="flexcontainer">
-    <span (click)="back()"  class="times">
+    <!-- <span (click)="back()"  class="times">
          <i class="fa fa-times" aria-hidden="true"></i>
-    </span>
+    </span> -->
     <ng-container >
       <div  class="poem">
+        <span (click)="back()"  class="times">
+          <i class="fa fa-times" aria-hidden="true"></i>
+     </span>
         <h1 class="line">{{title}}</h1>
         <h2>by Halina Kierpiec</h2>
          <ng-container>
-          <p  [innerHTML]="splitTextWithBr(name).join('<br><br>')"         class="p"></p>
+          <p  [innerHTML]="splitTextWithBr(name).join('<br>')"         class="p"></p>
          </ng-container>
 
 
