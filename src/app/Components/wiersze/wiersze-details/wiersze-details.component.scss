@@ -20,9 +20,9 @@
   pointer-events: none;
   backdrop-filter: blur(7px);
   background-color: #a3c6e84e;
- @include respond(phone){
-  background-color: #a3c6e8;
- }
+  @include respond(phone) {
+    background-color: #a3c6e8;
+  }
   &.active {
     transition: all 0.3s linear;
 

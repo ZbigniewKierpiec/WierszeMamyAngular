@@ -1,4 +1,4 @@
-<div   @fadeIn    [class.active]="tornActive"        class="box">
+<div      [class.active]="tornActive"        class="box">
 <div class="flexcontainer">
 
 <div class="poems-header">
@@ -12,7 +12,7 @@
   </div>
 </div>
 <div class="poems-main">
-  <p   [innerHTML]="splitTextWithBr(name).join('<br>')"></p>
+  <p   [innerHTML]="splitTextWithBr(name,220).join('<br>')"></p>
 </div>
 
 </div>
