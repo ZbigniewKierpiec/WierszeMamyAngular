@@ -40,10 +40,10 @@
     </li>
 
     <li
-
+    [attr.data-content]="content"
     (click)="selectLi(1)"
-
-      class="animatedListItem"
+    [class.active]="active"
+      class="animatedListItem wiersze"
     >
       <a
 

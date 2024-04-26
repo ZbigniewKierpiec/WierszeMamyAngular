@@ -113,7 +113,7 @@ export class WierszeService {
       title: 'przeprosiny na pożegnanie',
       name: 'wręczam ci tę czrewoną róże , dzis na  przeprosiny , wybacz każdą chwilę w której cię raniłam Głupia byłam przecież cię kocham więc miłość moją , dziś tobie oddaję i teraz na zawsze , się z tobą rozstaję bo czasem tak bywa w życiu tym niestety że bardzo siś kocha , a odchodzi się bez słowa.',
     },
-
+   
 
   ];
   constructor() {}

@@ -8,6 +8,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Poems } from 'src/app/Models/poems.model';
+import { WierszeService } from 'src/app/Services/wiersze.service';
 
 @Component({
   selector: 'app-header',
@@ -23,9 +25,10 @@ export class HeaderComponent implements OnInit {
   markerWidth: number = 0;
   isActive: boolean = false;
   menuItems: string[] = ['Our Work', 'About', 'Careers', 'Contact'];
-
-
-  constructor(private renderer: Renderer2, private router: Router , private el: ElementRef) {}
+  wiersze:Poems[]=[];
+  content: number = 1;
+  active:boolean=false;
+  constructor(private renderer: Renderer2, private router: Router , private el: ElementRef , private poemsService:WierszeService) {}
 
 
 
@@ -90,7 +93,11 @@ console.log(this.isActive)
       if (event instanceof NavigationEnd) {
         // Check if the current route matches '/main'
         this.isActiveMain = this.router.url === '/main';
+        this.active = this.router.url ==='/wiersze';
       }
     });
+
+this.wiersze = this.poemsService.getPoems();
+  this.content =this.wiersze.length
   }
 }
