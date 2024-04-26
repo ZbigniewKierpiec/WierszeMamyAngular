@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import {
   Component,
   ElementRef,
@@ -15,6 +16,7 @@ import { WierszeService } from 'src/app/Services/wiersze.service';
   selector: 'app-wiersze',
   templateUrl: './wiersze.component.html',
   styleUrls: ['./wiersze.component.scss'],
+  
 })
 export class WierszeComponent implements OnInit {
   @ViewChild('poemsContainer') poemsContainer?: ElementRef;

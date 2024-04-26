@@ -1,26 +1,21 @@
-<div [class.active]="tornActive" class="box">
-  <div id="flexcontainer">
-    <!-- <span (click)="back()"  class="times">
-         <i class="fa fa-times" aria-hidden="true"></i>
-    </span> -->
-    <ng-container >
-      <div  class="poem">
-        <span (click)="back()"  class="times">
-          <i class="fa fa-times" aria-hidden="true"></i>
-     </span>
-        <h1 class="line">{{title}}</h1>
-        <h2>by Halina Kierpiec</h2>
-         <ng-container>
-          <p  [innerHTML]="splitTextWithBr(name).join('<br>')"         class="p"></p>
-         </ng-container>
+<div   @fadeIn    [class.active]="tornActive"        class="box">
+<div class="flexcontainer">
 
-
-
-      </div>
-    </ng-container>
+<div class="poems-header">
+  <span (click)="back()" class="times">
+<i class="fa fa-times" aria-hidden="true"></i>
+  </span>
+  <h1 class="mainTitle">{{title}}</h1>
+  <h2 class="subTitle">by Halina Kierpiec</h2>
+  <div class="divider">
+    <img src="assets/—Pngtree—various decorative text dividers_5828541.png" alt="">
   </div>
+</div>
+<div class="poems-main">
+  <p   [innerHTML]="splitTextWithBr(name).join('<br>')"></p>
+</div>
 
-
+</div>
 
 
 </div>

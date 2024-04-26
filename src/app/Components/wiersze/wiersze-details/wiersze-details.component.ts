@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -8,6 +9,7 @@ import { Poems } from 'src/app/Models/poems.model';
   selector: 'app-wiersze-details',
   templateUrl: './wiersze-details.component.html',
   styleUrls: ['./wiersze-details.component.scss'],
+ 
 })
 export class WierszeDetailsComponent implements OnInit {
   @Output() eventToParent: EventEmitter<any> = new EventEmitter<any>();
